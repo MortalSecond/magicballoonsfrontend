@@ -78,6 +78,11 @@ a {
   color: inherit;
 }
 
+/* Sobre la foto de portada el botón transparente necesita borde blanco */
+.hero .button--ghost {
+  border-color: #ffffff;
+}
+
 .button--ghost:hover {
   background: rgba(232, 89, 12, 0.12);
 }
@@ -152,7 +157,7 @@ a {
   /* capa oscura encima de la foto para que se lea el texto */
   background:
     linear-gradient(rgba(15, 20, 40, 0.55), rgba(15, 20, 40, 0.35)),
-    url("../images/portada.jpg") center / cover,
+    url("https://magicballoonsmexico.com/wp-content/uploads/2025/09/slide1.jpg") center / cover,
     #1f2a44;
   color: #ffffff;
 }
@@ -173,6 +178,7 @@ a {
 .hero__title {
   font-size: clamp(2.6rem, 8vw, 5rem);
   max-width: 12ch;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
 }
 
 .hero__text {
@@ -207,6 +213,22 @@ a {
   font-size: clamp(1.9rem, 4vw, 2.6rem);
 }
 
+/* Rayita naranja debajo de cada título */
+.section__title::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 4px;
+  margin-top: 0.6rem;
+  border-radius: 2px;
+  background: #e8590c;
+}
+
+.contact .section__title::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .section__lead {
   max-width: 55ch;
   margin: 0 0 2.5rem;
@@ -229,6 +251,12 @@ a {
   border-radius: 16px;
   background: #ffffff;
   box-shadow: 0 4px 20px rgba(31, 42, 68, 0.1);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.package:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 34px rgba(31, 42, 68, 0.18);
 }
 
 .package__image {
@@ -263,6 +291,7 @@ a {
 }
 
 .package__unit {
+  display: block; /* "MXN por persona" en su propia línea, debajo del precio */
   font-size: 0.9rem;
   font-weight: 400;
   color: #5b6478;
@@ -284,15 +313,23 @@ a {
 
 .about {
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: center;
+}
+
+.about__image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(31, 42, 68, 0.15);
 }
 
 .facts {
   display: grid;
   gap: 1rem;
-  margin: 0;
+  margin: 1.5rem 0 0;
   padding: 0;
   list-style: none;
 }
@@ -319,15 +356,25 @@ a {
 }
 
 .review {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 1.75rem;
   border-radius: 16px;
   background: #fdf6ee;
 }
 
+/* Los círculos verdes de TripAdvisor */
+.review__stars {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: #00aa6c;
+}
+
 .review__quote {
-  margin: 0 0 1rem;
-  font-size: 1.05rem;
+  flex: 1; /* alinea autor y enlace al fondo de todas las tarjetas */
+  margin: 0.5rem 0 1rem;
+  font-size: 1.1rem;
   font-style: italic;
 }
 
@@ -335,12 +382,24 @@ a {
   font-weight: 600;
 }
 
+.review__link {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  color: #e8590c;
+}
+
+.reviews__more {
+  margin: 2rem 0 0;
+  text-align: center;
+}
+
 
 /* ---------- Galería ---------- */
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  /* 4 columnas: con 12 fotos quedan 3 filas completas, sin huecos */
+  grid-template-columns: repeat(4, 1fr);
   gap: 0.75rem;
 }
 
@@ -395,6 +454,15 @@ a {
 
 .contact {
   text-align: center;
+  color: #ffffff;
+  background:
+    linear-gradient(rgba(15, 20, 40, 0.7), rgba(15, 20, 40, 0.7)),
+    url("https://magicballoonsmexico.com/wp-content/uploads/2025/09/slide2.jpg") center / cover,
+    #1f2a44;
+}
+
+.contact .button--ghost {
+  border-color: #ffffff;
 }
 
 .contact .section__lead {
@@ -413,7 +481,8 @@ a {
 /* ---------- Pie de página ---------- */
 
 .footer {
-  padding: 2rem 1.25rem;
+  /* el espacio de abajo es para que el botón de WhatsApp no tape los enlaces */
+  padding: 2rem 1.25rem 5.5rem;
   background: #1f2a44;
   color: #ffffff;
 }
@@ -480,6 +549,14 @@ a {
 
   .about {
     grid-template-columns: 1fr;
+  }
+
+  .about__image {
+    aspect-ratio: 4 / 3;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .section {
