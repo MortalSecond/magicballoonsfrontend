@@ -1,0 +1,598 @@
+/* ==============================================================
+   Magic Balloons — estilos
+   Cada bloque de abajo corresponde a una sección de index.html.
+   Los nombres siguen el patrón bloque__elemento--variante (BEM):
+     .package            la tarjeta
+     .package__price     una parte de la tarjeta
+     .button--ghost      una versión distinta del botón
+
+   Colores de la marca (búscalos con Ctrl+F para cambiarlos):
+     #e8590c  naranja (botones)
+     #1f2a44  azul noche (textos y pie de página)
+     #fdf6ee  crema (fondos de sección)
+   ============================================================== */
+
+
+/* ---------- Base ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px; /* para que el menú fijo no tape los títulos */
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #1f2a44;
+  background: #ffffff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+}
+
+a {
+  color: inherit;
+}
+
+
+/* ---------- Botones ---------- */
+
+.button {
+  display: inline-block;
+  padding: 0.8em 1.6em;
+  border: 2px solid #e8590c;
+  border-radius: 999px;
+  background: #e8590c;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.button:hover {
+  background: #c94a06;
+  border-color: #c94a06;
+  transform: translateY(-2px);
+}
+
+.button--ghost {
+  background: transparent;
+  color: inherit;
+}
+
+.button--ghost:hover {
+  background: rgba(232, 89, 12, 0.12);
+}
+
+.button--small {
+  padding: 0.45em 1.2em;
+  color: #ffffff;
+}
+
+
+/* ---------- Encabezado ---------- */
+
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0.6rem 1.25rem;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+.header__toggle {
+  display: none;
+  padding: 0.4em 1em;
+  border: 1px solid #1f2a44;
+  border-radius: 6px;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav__link {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: #e8590c;
+}
+
+
+/* ---------- Portada ---------- */
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 92vh;
+  padding: 7rem 1.25rem 4rem;
+  /* capa oscura encima de la foto para que se lea el texto */
+  background:
+    linear-gradient(rgba(15, 20, 40, 0.55), rgba(15, 20, 40, 0.35)),
+    url("../images/portada.jpg") center / cover,
+    #1f2a44;
+  color: #ffffff;
+}
+
+.hero__content {
+  max-width: 1150px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero__eyebrow {
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.85rem;
+}
+
+.hero__title {
+  font-size: clamp(2.6rem, 8vw, 5rem);
+  max-width: 12ch;
+}
+
+.hero__text {
+  font-size: 1.25rem;
+  max-width: 34ch;
+  margin: 0 0 2rem;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+
+/* ---------- Secciones ---------- */
+
+.section {
+  padding: 5rem 1.25rem;
+}
+
+.section--tinted {
+  background: #fdf6ee;
+}
+
+.section__inner {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.section__title {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+}
+
+.section__lead {
+  max-width: 55ch;
+  margin: 0 0 2.5rem;
+  font-size: 1.1rem;
+}
+
+
+/* ---------- Paquetes ---------- */
+
+.packages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.package {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(31, 42, 68, 0.1);
+}
+
+.package__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: #fdf6ee; /* se ve mientras no haya foto */
+}
+
+.package__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.package__name {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.package__summary {
+  margin: 0 0 1rem;
+  color: #5b6478;
+}
+
+.package__price {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e8590c;
+}
+
+.package__unit {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #5b6478;
+}
+
+.package__list {
+  flex: 1; /* empuja el botón hasta abajo para que todos queden alineados */
+  margin: 0 0 1.5rem;
+  padding-left: 1.2rem;
+  font-size: 0.95rem;
+}
+
+.package__button {
+  width: 100%;
+}
+
+
+/* ---------- Nosotros ---------- */
+
+.about {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.facts {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.facts__item {
+  padding: 1rem 1.25rem;
+  border-left: 4px solid #e8590c;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.facts__number {
+  display: block;
+  font-size: 1.5rem;
+}
+
+
+/* ---------- Opiniones ---------- */
+
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.review {
+  margin: 0;
+  padding: 1.75rem;
+  border-radius: 16px;
+  background: #fdf6ee;
+}
+
+.review__quote {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  font-style: italic;
+}
+
+.review__author {
+  font-weight: 600;
+}
+
+
+/* ---------- Galería ---------- */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.gallery__image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #ffffff;
+  cursor: zoom-in;
+  transition: opacity 0.2s;
+}
+
+.gallery__image:hover {
+  opacity: 0.85;
+}
+
+.lightbox {
+  max-width: 92vw;
+  max-height: 92vh;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+}
+
+.lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.lightbox__image {
+  max-width: 92vw;
+  max-height: 92vh;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+
+/* ---------- Contacto ---------- */
+
+.contact {
+  text-align: center;
+}
+
+.contact .section__lead {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+/* ---------- Pie de página ---------- */
+
+.footer {
+  padding: 2rem 1.25rem;
+  background: #1f2a44;
+  color: #ffffff;
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer__social {
+  display: flex;
+  gap: 1.25rem;
+}
+
+
+/* ---------- Botón flotante de WhatsApp ---------- */
+
+.whatsapp {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 10;
+  padding: 0.8em 1.3em;
+  border-radius: 999px;
+  background: #25d366;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ---------- Celulares (pantallas menores a 760px) ---------- */
+
+@media (max-width: 760px) {
+  .header__toggle {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    padding: 1rem 1.25rem 1.5rem;
+    background: #ffffff;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav--open {
+    display: flex;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 3.5rem 1.25rem;
+  }
+}
+
+
+/* ---------- Página de políticas (politicas.html) ---------- */
+
+.legal {
+  max-width: 780px; /* líneas cortas = texto largo más fácil de leer */
+  margin: 0 auto;
+  padding: 7rem 1.25rem 4rem;
+}
+
+.legal__title {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+}
+
+.legal__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2.5rem;
+  margin: 0 0 2rem;
+  color: #5b6478;
+}
+
+.legal__facts dt {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.legal__facts dd {
+  margin: 0;
+  color: #1f2a44;
+}
+
+.legal__index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 3rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: #fdf6ee;
+}
+
+.legal__index a {
+  padding: 0.3em 0.9em;
+  border-radius: 999px;
+  background: #ffffff;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.legal__index a:hover {
+  color: #e8590c;
+}
+
+.legal__section {
+  padding: 2rem 0;
+  border-top: 1px solid #eadfd3;
+}
+
+.legal__section h2 {
+  font-size: 1.45rem;
+}
+
+.legal__section p {
+  margin: 0 0 0.75rem;
+}
+
+.legal__section ul,
+.legal__section ol {
+  margin: 0 0 1rem;
+  padding-left: 1.3rem;
+}
+
+.legal__section li {
+  margin-bottom: 0.4rem;
+}
+
+.legal__section li::marker {
+  color: #e8590c;
+}
+
+.legal__note {
+  padding: 0.8rem 1rem;
+  border-left: 4px solid #e8590c;
+  border-radius: 6px;
+  background: #fdf6ee;
+}
+
+.legal__section--alert {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  border: 2px solid #e8590c;
+  border-radius: 12px;
+}
+
+.legal__terms dt {
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+.legal__terms dd {
+  margin: 0.2rem 0 0;
+}
+
+.legal__back {
+  margin-top: 2rem;
+  text-align: center;
+}

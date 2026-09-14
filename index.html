@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magic Balloons México — Vuelos en globo sobre Teotihuacán</title>
+  <meta name="description" content="Vuela en globo aerostático sobre las pirámides de Teotihuacán. Vuelos compartidos y privados, desayuno, brindis y certificado de vuelo.">
+  <link rel="icon" href="images/logo.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       ENCABEZADO: logo y menú
+       ============================================================ -->
+  <header class="header">
+    <div class="header__inner">
+      <a class="header__logo" href="#inicio">
+        <img src="images/logo.png" alt="Magic Balloons México" width="180" height="60">
+        <span>Magic Balloons</span>
+      </a>
+
+      <button class="header__toggle" type="button" aria-expanded="false" aria-controls="menu">
+        Menú
+      </button>
+
+      <nav class="nav" id="menu">
+        <a class="nav__link" href="#vuelos">Vuelos</a>
+        <a class="nav__link" href="#nosotros">Nosotros</a>
+        <a class="nav__link" href="#galeria">Galería</a>
+        <a class="nav__link" href="#contacto">Contacto</a>
+        <a class="button button--small" href="https://fareharbor.com/embeds/book/magicballoonsmexico/?full-items=yes&language=es">Reservar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         PORTADA
+         Para cambiar la foto de fondo, reemplaza images/portada.jpg
+         (mismo nombre de archivo) o edita .hero en css/styles.css
+         ============================================================ -->
+    <section class="hero" id="inicio">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Teotihuacán, Estado de México</p>
+        <h1 class="hero__title">La magia de volar</h1>
+        <p class="hero__text">Mira el amanecer sobre las pirámides desde un globo aerostático.</p>
+        <div class="hero__actions">
+          <a class="button" href="#vuelos">Ver paquetes</a>
+          <a class="button button--ghost" href="https://wa.link/82540x">Escríbenos por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         PAQUETES
+         Cada paquete es un bloque <article class="package">.
+         Para agregar uno: copia un <article> completo y pégalo debajo.
+
+         IMPORTANTE: el PRECIO y el ENLACE DE RESERVA van juntos.
+         El número después de /items/ es el paquete en FareHarbor.
+         Si cambias el precio aquí, confirma que sea el mismo en FareHarbor.
+         ============================================================ -->
+    <section class="section" id="vuelos">
+      <div class="section__inner">
+        <h2 class="section__title">Nuestros vuelos</h2>
+        <p class="section__lead">Todos los vuelos duran aproximadamente una hora e incluyen certificado de vuelo.</p>
+
+        <div class="packages">
+
+          <!-- PAQUETE ESENCIAL — FareHarbor item 448577 -->
+          <article class="package">
+            <img class="package__image" src="images/paquetes/esencial.jpg" alt="Globos sobre Teotihuacán al amanecer" loading="lazy">
+            <div class="package__body">
+              <h3 class="package__name">Esencial</h3>
+              <p class="package__summary">Vuelo compartido</p>
+              <p class="package__price">$2,499 <span class="package__unit">MXN por persona</span></p>
+              <ul class="package__list">
+                <li>Vuelo compartido (aprox. 1 hora)</li>
+                <li>Brindis con vino espumoso</li>
+                <li>Coffee break</li>
+                <li>Explicación de la obsidiana y de Teotihuacán</li>
+                <li>Degustación de vinos y licores</li>
+                <li>Desayuno buffet</li>
+                <li>Certificado de vuelo</li>
+              </ul>
+              <a class="button package__button" href="https://fareharbor.com/embeds/book/magicballoonsmexico/items/448577/?full-items=yes&flow=922034&language=es">Reservar</a>
+            </div>
+          </article>
+
+          <!-- PAQUETE EXPERIENCIA — FareHarbor item 448570 -->
+          <article class="package">
+            <img class="package__image" src="images/paquetes/experiencia.jpg" alt="Pasajeros dentro de la canasta del globo" loading="lazy">
+            <div class="package__body">
+              <h3 class="package__name">Experiencia</h3>
+              <p class="package__summary">Vuelo compartido con transporte desde CDMX</p>
+              <p class="package__price">$2,899 <span class="package__unit">MXN por persona</span></p>
+              <ul class="package__list">
+                <li>Vuelo compartido (aprox. 1 hora)</li>
+                <li>Transporte redondo desde CDMX</li>
+                <li>Entrada a la zona arqueológica</li>
+                <li>Brindis con vino espumoso</li>
+                <li>Coffee break</li>
+                <li>Explicación de la obsidiana y de Teotihuacán</li>
+                <li>Degustación de vinos y licores</li>
+                <li>Desayuno buffet</li>
+                <li>Certificado de vuelo</li>
+              </ul>
+              <a class="button package__button" href="https://fareharbor.com/embeds/book/magicballoonsmexico/items/448570/?full-items=yes&flow=922034&language=es">Reservar</a>
+            </div>
+          </article>
+
+          <!-- PAQUETE PREMIUM — FareHarbor item 734628 -->
+          <article class="package">
+            <img class="package__image" src="images/paquetes/premium.jpg" alt="Desayuno dentro de la cueva" loading="lazy">
+            <div class="package__body">
+              <h3 class="package__name">Premium</h3>
+              <p class="package__summary">Vuelo compartido con desayuno en cueva</p>
+              <p class="package__price">$3,200 <span class="package__unit">MXN por persona</span></p>
+              <ul class="package__list">
+                <li>Vuelo compartido (aprox. 1 hora)</li>
+                <li>Transporte redondo desde CDMX</li>
+                <li>Entrada a la zona arqueológica</li>
+                <li>Desayuno en cueva</li>
+                <li>Brindis con vino espumoso</li>
+                <li>Coffee break</li>
+                <li>Explicación de la obsidiana y de Teotihuacán</li>
+                <li>Degustación de vinos y licores</li>
+                <li>Certificado de vuelo</li>
+              </ul>
+              <a class="button package__button" href="https://fareharbor.com/embeds/book/magicballoonsmexico/items/734628/?full-items=yes&flow=922034&language=es">Reservar</a>
+            </div>
+          </article>
+
+          <!-- PAQUETE EXCLUSIVO — FareHarbor item 448587 -->
+          <article class="package">
+            <img class="package__image" src="images/paquetes/exclusivo.jpg" alt="Pareja en un vuelo privado" loading="lazy">
+            <div class="package__body">
+              <h3 class="package__name">Exclusivo</h3>
+              <p class="package__summary">Vuelo privado para dos personas</p>
+              <p class="package__price">$8,990 <span class="package__unit">MXN por pareja</span></p>
+              <ul class="package__list">
+                <li>Vuelo privado</li>
+                <li>Brindis con vino espumoso</li>
+                <li>Coffee break</li>
+                <li>Explicación de la obsidiana y de Teotihuacán</li>
+                <li>Degustación de vinos y licores</li>
+                <li>Desayuno buffet</li>
+                <li>Certificado de vuelo</li>
+              </ul>
+              <a class="button package__button" href="https://fareharbor.com/embeds/book/magicballoonsmexico/items/448587/?full-items=yes&flow=922034&language=es">Reservar</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         NOSOTROS
+         ============================================================ -->
+    <section class="section section--tinted" id="nosotros">
+      <div class="section__inner about">
+        <div class="about__text">
+          <h2 class="section__title">Sobre Magic Balloons</h2>
+          <p>Llevamos años creando experiencias únicas en el aire. Más de 10,000 pasajeros han confiado en nosotros para volar sobre Teotihuacán, con seguridad, atención personalizada y recuerdos inolvidables.</p>
+        </div>
+        <ul class="facts">
+          <li class="facts__item"><strong class="facts__number">+10,000</strong> pasajeros</li>
+          <li class="facts__item"><strong class="facts__number">AFAC</strong> empresa certificada</li>
+          <li class="facts__item"><strong class="facts__number">Pilotos</strong> certificados y capacitados</li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         OPINIONES
+         Para agregar una: copia un <figure class="review"> completo.
+         ============================================================ -->
+    <section class="section" id="opiniones">
+      <div class="section__inner">
+        <h2 class="section__title">Lo que dicen nuestros pasajeros</h2>
+        <div class="reviews">
+
+          <figure class="review">
+            <blockquote class="review__quote">Una experiencia mágica. Volar sobre las pirámides fue increíble, el equipo muy profesional y seguro.</blockquote>
+            <figcaption class="review__author">Mariana G. — CDMX</figcaption>
+          </figure>
+
+          <figure class="review">
+            <blockquote class="review__quote">Celebramos nuestro aniversario en un globo privado. Todo perfecto: vino, fotos y un servicio excepcional.</blockquote>
+            <figcaption class="review__author">Lucía P. — Guadalajara</figcaption>
+          </figure>
+
+          <figure class="review">
+            <blockquote class="review__quote">Reservé el paquete con transporte y fue comodísimo. Todo incluido y sin preocupaciones, lo volvería a hacer.</blockquote>
+            <figcaption class="review__author">Carlos M. — Monterrey</figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         GALERÍA
+         Para agregar una foto:
+           1. Sube la imagen a la carpeta images/galeria/
+           2. Copia una línea <img> y cambia el nombre del archivo
+         Escribe siempre un "alt" que describa la foto (ayuda en Google).
+         ============================================================ -->
+    <section class="section section--tinted" id="galeria">
+      <div class="section__inner">
+        <h2 class="section__title">Galería</h2>
+        <div class="gallery">
+          <img class="gallery__image" src="images/galeria/01.jpg" alt="Globos elevándose al amanecer" loading="lazy">
+          <img class="gallery__image" src="images/galeria/02.jpg" alt="Vista de la Pirámide del Sol desde el globo" loading="lazy">
+          <img class="gallery__image" src="images/galeria/03.jpg" alt="Pasajeros celebrando con un brindis" loading="lazy">
+          <img class="gallery__image" src="images/galeria/04.jpg" alt="Inflado del globo antes del vuelo" loading="lazy">
+          <img class="gallery__image" src="images/galeria/05.jpg" alt="Desayuno después del vuelo" loading="lazy">
+          <img class="gallery__image" src="images/galeria/06.jpg" alt="Globo sobre el valle de Teotihuacán" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         CONTACTO
+         ============================================================ -->
+    <section class="section contact" id="contacto">
+      <div class="section__inner">
+        <h2 class="section__title">¿Listo para volar?</h2>
+        <p class="section__lead">Reserva en línea o escríbenos, te ayudamos a elegir tu vuelo.</p>
+        <div class="contact__actions">
+          <a class="button" href="https://fareharbor.com/embeds/book/magicballoonsmexico/?full-items=yes&language=es">Reservar en línea</a>
+          <a class="button button--ghost" href="https://wa.link/82540x">WhatsApp</a>
+          <a class="button button--ghost" href="tel:+525635362245">+52 56 3536 2245</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================================
+       PIE DE PÁGINA
+       ============================================================ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p>&copy; Magic Balloons México</p>
+      <nav class="footer__social">
+        <a href="https://www.facebook.com/magicballoonsmexico">Facebook</a>
+        <a href="https://www.instagram.com/magicballoonsmexico">Instagram</a>
+        <a href="https://www.tiktok.com/@magicballoonsmexico">TikTok</a>
+        <a href="https://www.youtube.com/@MagicBallonsMexico">YouTube</a>
+      </nav>
+      <a href="politicas.html">Políticas y condiciones de vuelo</a>
+    </div>
+  </footer>
+
+
+  <!-- WhatsApp flotante -->
+  <a class="whatsapp" href="https://wa.link/82540x" aria-label="Escríbenos por WhatsApp">WhatsApp</a>
+
+  <!-- Galería ampliada (se abre al tocar una foto) -->
+  <dialog class="lightbox" id="lightbox">
+    <img class="lightbox__image" src="" alt="">
+    <button class="lightbox__close" type="button" aria-label="Cerrar">&times;</button>
+  </dialog>
+
+  <!-- FareHarbor: abre la reserva en una ventana encima de la página.
+       No borrar. Si se borra, los botones "Reservar" siguen funcionando
+       pero abren la página de FareHarbor en lugar de la ventana. -->
+  <script src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
