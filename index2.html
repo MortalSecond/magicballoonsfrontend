@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magic Balloons México - Vive la magia de volar en globo</title>
+  <meta name="description" content="Vuela en globo aerostático sobre las pirámides de Teotihuacán. Vuelos compartidos y privados, desayuno, brindis y certificado de vuelo.">
+  <link rel="icon" href="images/logo.png">
+  <!-- Tipografías del diseño original: Anton (títulos) y Montserrat (subtítulos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;600&display=swap">
+  <link rel="stylesheet" href="css/styles2.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NOTA: esta versión copia el diseño de la página anterior.
+       Las fotos todavía se cargan desde magicballoonsmexico.com;
+       cuando esa página se apague, hay que bajarlas a images/.
+       ============================================================ -->
+
+  <!-- ENCABEZADO -->
+  <header class="header">
+    <div class="header__inner">
+      <a class="header__logo" href="#inicio">
+        <img src="https://magicballoonsmexico.com/wp-content/uploads/2025/09/cropped-logo.png" alt="Magic Balloons México" width="160" height="78">
+      </a>
+
+      <button class="header__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="menu">
+        <a class="nav__link" href="#inicio">Inicio</a>
+        <a class="nav__link" href="#vuelos">Vuelos</a>
+        <a class="nav__link" href="#nosotros">Acerca de</a>
+        <a class="nav__link" href="#galeria">Galería</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         PORTADA: dos fotos que se van alternando solas.
+         Para cambiar las fotos, edita .hero__slide--1 y --2 en css/styles2.css
+         ============================================================ -->
+    <section class="hero" id="inicio">
+      <div class="hero__slide hero__slide--1"></div>
+      <div class="hero__slide hero__slide--2"></div>
+      <div class="hero__content">
+        <h1 class="hero__title">La magia de volar</h1>
+        <a class="button" href="https://fareharbor.com/embeds/book/magicballoonsmexico/?full-items=yes&language=es">Reservar ahora</a>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         PAQUETES
+         Cada paquete es un bloque <article class="package">.
+         IMPORTANTE: el PRECIO y el ENLACE DE RESERVA van juntos.
+         El número después de /items/ es el paquete en FareHarbor.
+         Si cambias el precio aquí, confirma que sea el mismo en FareHarbor.
+
+         Los globos decorativos (<img class="balloon">) son solo adorno;
+         se pueden borrar sin romper nada.
+         ============================================================ -->
+    <section class="flights" id="vuelos">
+      <div class="flights__inner">
+        <h2 class="flights__title">Selecciona tu vuelo</h2>
+
+        <!-- PAQUETE ESENCIAL | FareHarbor item 448577 -->
+        <article class="package">
+          <img class="balloon balloon--left" src="https://magicballoonsmexico.com/wp-content/uploads/2025/09/glob01.png" alt="" aria-hidden="true">
+          <img class="package__image" src="https://magicballoonsmexico.com/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-08-at-6.28.49-PM-768x1365.jpeg" alt="Pasajeros de Magic Balloons antes del vuelo" loading="lazy">
+          <div class="package__body">
+            <h3 class="package__name">Paquete Esencial</h3>
+            <p class="package__summary">(Vuelo compartido · aprox. 1 hora)</p>
+            <ul class="package__list">
+              <li>Vuelo compartido (aprox. 1 hora)</li>
+              <li>Brindis espumoso</li>
+              <li>Coffee Break</li>
+              <li>Explicación sobre la obsidiana y su importancia en Teotihuacán</li>
+              <li>Degustación de vinos y licores</li>
+              <li>Desayuno buffet</li>
+              <li>Certificado de vuelo</li>
+            </ul>
+            <p class="package__price">$2,499 MXN</p>
+            <p class="package__unit">Precio por persona</p>
+            <a class="button" href="https://fareharbor.com/embeds/book/magicballoonsmexico/items/448577/?full-items=yes&flow=922034&language=es">Reserva ahora</a>
+          </div>
+        </article>
+
+        <!-- PAQUETE EXPERIENCIA | FareHarbor item 448570 -->
+        <article class="package package--reversed">
+          <img class="balloon balloon--right" src="https://magicballoonsmexico.com/wp-content/uploads/2025/09/glob3.png" alt="" aria-hidden="true">
+          <img class="package__image" src="https://magicballoonsmexico.com/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-08-at-6.23.14-PM-682x1024.jpeg" alt="Camioneta de Magic Balloons para el transporte desde CDMX" loading="lazy">
+          <div class="package__body">
+            <h3 class="package__name">Paquete Experiencia</h3>
+            <p class="package__summary">(Con transporte redondo desde CDMX)</p>
+            <ul class="package__list">
+              <li>Vuelo compartido (aprox. 1 hora)</li>
+              <li>Transporte redondo desde la Ciudad de México</li>
+              <li>Coffee Break</li>
+              <li>Desayuno buffet</li>
+              <li>Brindis espumoso</li>
+              <li>Explicación sobre la obsidiana y su importancia en Teotihuacán</li>
+              <li>Degustación de vinos y licores</li>
+              <li>Certificado de vuelo</li>
+              <li>Entrada a la zona arqueológica</li>
+            </ul>
+            <p class="package__price">$2,899 MXN</p>
+            <p class="package__unit">Precio por persona</p>
+            <a class="button" href="https://fareharbor.com/embeds/book/magicballoonsmexico/items/448570/?full-items=yes&flow=922034&language=es">Reserva ahora</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+
+    <!-- Segunda parte de los paquetes, sobre fondo rosa -->
+    <section class="flights flights--pink">
+      <div class="flights__inner">
+
+        <!-- PAQUETE PREMIUM | FareHarbor item 734628 -->
+        <article class="package">
+          <img class="balloon balloon--left" src="https://magicballoonsmexico.com/wp-content/uploads/2025/09/glob2.png" alt="" aria-hidden="true">
+          <img class="package__image" src="https://magicballoonsmexico.com/wp-content/uploads/2025/09/compartido-con-desayuna2.png" alt="Desayuno dentro de la cueva" loading="lazy">
+          <div class="package__body">
+            <h3 class="package__name">Paquete Premium</h3>
+            <p class="package__summary">(Con desayuno en cueva)</p>
+            <ul class="package__list">
+              <li>Vuelo compartido (aprox. 1 hora)</li>
+              <li>Transporte redondo desde la Ciudad de México</li>
+              <li>Brindis espumoso</li>
+              <li>Coffee Break</li>
+              <li>Desayuno en cueva</li>
+              <li>Explicación sobre la obsidiana y su importancia en Teotihuacán</li>
+              <li>Degustación de vinos y licores</li>
+              <li>Certificado de vuelo</li>
+              <li>Entrada a la zona arqueológica</li>
+            </ul>
+            <p class="package__price">$3,200 MXN</p>
+            <p class="package__unit">Precio por persona</p>
+            <a class="button" href="https://fareharbor.com/embeds/book/magicballoonsmexico/items/734628/?full-items=yes&flow=922034&language=es">Reserva ahora</a>
+          </div>
+        </article>
+
+        <!-- PAQUETE EXCLUSIVO | FareHarbor item 448587 -->
+        <article class="package package--reversed">
+          <img class="package__image" src="https://magicballoonsmexico.com/wp-content/uploads/2026/09/687989992_1304269508500209_8303819705777604732_n-e1788937387555-729x1024.jpg" alt="Pareja en un vuelo privado" loading="lazy">
+          <div class="package__body">
+            <h3 class="package__name">Paquete Exclusivo</h3>
+            <p class="package__summary">(Vuelo privado para 2 personas)</p>
+            <ul class="package__list">
+              <li>Vuelo privado</li>
+              <li>Brindis espumoso</li>
+              <li>Coffee Break</li>
+              <li>Desayuno buffet</li>
+              <li>Explicación sobre la obsidiana y su importancia en Teotihuacán</li>
+              <li>Degustación de vinos y licores</li>
+              <li>Certificado de vuelo</li>
+            </ul>
+            <p class="package__price">$8,990 MXN</p>
+            <p class="package__unit">Precio por pareja</p>
+            <a class="button" href="https://fareharbor.com/embeds/book/magicballoonsmexico/items/448587/?full-items=yes&flow=922034&language=es">Reserva ahora</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         ACERCA DE
+         ============================================================ -->
+    <section class="about" id="nosotros">
+      <div class="about__inner">
+        <h2 class="about__title">Acerca de</h2>
+        <p class="about__text">En <strong>Magic Balloons</strong> creamos experiencias únicas en el aire. Más de 10,000 pasajeros han confiado en nosotros para vivir la magia de volar sobre Teotihuacán, disfrutando seguridad, atención personalizada y recuerdos inolvidables.</p>
+
+        <ul class="badges">
+          <li class="badges__item">
+            <img class="badges__icon" src="https://magicballoonsmexico.com/wp-content/uploads/2025/09/piloto1.png" alt="" loading="lazy">
+            <strong>Pilotos certificados</strong> y altamente capacitados
+          </li>
+          <li class="badges__item">
+            <img class="badges__icon" src="https://magicballoonsmexico.com/wp-content/uploads/2025/09/globo1.png" alt="" loading="lazy">
+            <strong>Años de experiencia</strong> nos respaldan
+          </li>
+          <li class="badges__item">
+            <img class="badges__icon" src="https://magicballoonsmexico.com/wp-content/uploads/2025/09/globo.png" alt="" loading="lazy">
+            <strong>Empresa certificada</strong> por AFAC
+          </li>
+        </ul>
+      </div>
+      <img class="about__banner" src="https://magicballoonsmexico.com/wp-content/uploads/2025/09/smodos-768x333.jpg" alt="Globos de Magic Balloons sobre Teotihuacán" loading="lazy">
+    </section>
+
+
+    <!-- ============================================================
+         OPINIONES (reseñas reales de TripAdvisor)
+         Para agregar una: copia un <figure class="review"> completo,
+         pega una frase corta de la reseña y el enlace a la reseña original.
+         Usa frases cortas: la reseña completa se lee en TripAdvisor.
+         ============================================================ -->
+    <section class="reviews">
+      <div class="reviews__inner">
+        <h2 class="reviews__title">Lo que dicen nuestros pasajeros</h2>
+        <p class="reviews__rating">
+          <span class="reviews__stars" aria-hidden="true">●●●●●</span>
+          Más de 300 reseñas en TripAdvisor
+        </p>
+
+        <div class="reviews__list">
+
+          <figure class="review">
+            <span class="reviews__stars" aria-label="5 de 5">●●●●●</span>
+            <blockquote class="review__quote">Without question one of the highlights of our trip to Mexico.</blockquote>
+            <figcaption class="review__author">Scott M | Londres, Reino Unido</figcaption>
+            <a class="review__link" href="https://www.tripadvisor.com.mx/ShowUserReviews-g14989463-d26454966-r1077587903-Magic_Balloons_Mexico-Teotihuacan_de_Arista_Teotihuacan_Municipality_Central.html">Leer reseña completa</a>
+          </figure>
+
+          <figure class="review">
+            <span class="reviews__stars" aria-label="5 de 5">●●●●●</span>
+            <blockquote class="review__quote">Our hot air balloon ride was truly an unforgettable experience!</blockquote>
+            <figcaption class="review__author">justkatng | Nueva Orleans, EE. UU.</figcaption>
+            <a class="review__link" href="https://www.tripadvisor.com.mx/ShowUserReviews-g14989463-d26454966-r1077587903-Magic_Balloons_Mexico-Teotihuacan_de_Arista_Teotihuacan_Municipality_Central.html">Leer en TripAdvisor</a>
+          </figure>
+
+          <figure class="review">
+            <span class="reviews__stars" aria-label="5 de 5">●●●●●</span>
+            <blockquote class="review__quote">Had an absolute blast with Magic Balloons.</blockquote>
+            <figcaption class="review__author">Compass15935628795</figcaption>
+            <a class="review__link" href="https://www.tripadvisor.com.mx/ShowUserReviews-g14989463-d26454966-r1077587903-Magic_Balloons_Mexico-Teotihuacan_de_Arista_Teotihuacan_Municipality_Central.html">Leer en TripAdvisor</a>
+          </figure>
+
+        </div>
+
+        <a class="button" href="https://www.tripadvisor.com.mx/ShowUserReviews-g14989463-d26454966-r1077587903-Magic_Balloons_Mexico-Teotihuacan_de_Arista_Teotihuacan_Municipality_Central.html">Ver todas las reseñas</a>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         GALERÍA
+         Para agregar una foto: copia una línea <img> y cambia la dirección.
+         ============================================================ -->
+    <section class="gallery-section" id="galeria">
+      <h2 class="gallery-section__title">Galería</h2>
+      <div class="gallery">
+        <img class="gallery__image" src="https://magicballoonsmexico.com/wp-content/uploads/2025/09/IMG_1638-1-scaled.jpg" alt="Vuelo en globo sobre Teotihuacán" loading="lazy">
+        <img class="gallery__image" src="https://magicballoonsmexico.com/wp-content/uploads/2025/09/IMG_2996-1-scaled.jpg" alt="Vuelo en globo sobre Teotihuacán" loading="lazy">
+        <img class="gallery__image" src="https://magicballoonsmexico.com/wp-content/uploads/2025/09/20250505_065758-1-scaled.jpg" alt="Globos al amanecer" loading="lazy">
+        <img class="gallery__image" src="https://magicballoonsmexico.com/wp-content/uploads/2025/09/IMG_2468-1-1-scaled.jpg" alt="Vuelo en globo sobre Teotihuacán" loading="lazy">
+        <img class="gallery__image" src="https://magicballoonsmexico.com/wp-content/uploads/2025/09/IMG_8767-1-scaled.jpg" alt="Vuelo en globo sobre Teotihuacán" loading="lazy">
+        <img class="gallery__image" src="https://magicballoonsmexico.com/wp-content/uploads/2025/09/IMG_2056-1-scaled.jpg" alt="Vuelo en globo sobre Teotihuacán" loading="lazy">
+        <img class="gallery__image" src="https://magicballoonsmexico.com/wp-content/uploads/2025/09/IMG_7091-13-1-scaled.jpg" alt="Vuelo en globo sobre Teotihuacán" loading="lazy">
+        <img class="gallery__image" src="https://magicballoonsmexico.com/wp-content/uploads/2025/09/IMG_5895-1-1-scaled.jpg" alt="Vuelo en globo sobre Teotihuacán" loading="lazy">
+        <img class="gallery__image" src="https://magicballoonsmexico.com/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-08-at-6.23.14-PM-1.jpeg" alt="Pasajeros de Magic Balloons" loading="lazy">
+        <img class="gallery__image" src="https://magicballoonsmexico.com/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-07-at-8.26.54-AM-1.jpeg" alt="Pasajeros de Magic Balloons" loading="lazy">
+        <img class="gallery__image" src="https://magicballoonsmexico.com/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-07-at-8.26.54-AM.jpeg" alt="Pasajeros de Magic Balloons" loading="lazy">
+        <img class="gallery__image" src="https://magicballoonsmexico.com/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-07-at-8.26.39-AM-1.jpeg" alt="Pasajeros de Magic Balloons" loading="lazy">
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================================
+       PIE DE PÁGINA
+       ============================================================ -->
+  <footer class="footer" id="contacto">
+    <div class="footer__inner">
+      <div class="footer__column">
+        <img class="footer__logo" src="https://magicballoonsmexico.com/wp-content/uploads/2025/09/iconlogoblanco.png" alt="Magic Balloons" loading="lazy">
+        <p>Experiencias únicas sobre Teotihuacán. Seguridad, confianza y recuerdos inolvidables.</p>
+      </div>
+
+      <div class="footer__column">
+        <h2 class="footer__title">Información de contacto</h2>
+        <p>Reservaciones: <a href="tel:+525635362245">+52 56 3536 2245</a></p>
+        <nav class="footer__social">
+          <a href="https://www.facebook.com/magicballoonsmexico">Facebook</a>
+          <a href="https://www.instagram.com/magicballoonsmexico">Instagram</a>
+          <a href="https://www.tiktok.com/@magicballoonsmexico">TikTok</a>
+          <a href="https://www.youtube.com/@MagicBallonsMexico">YouTube</a>
+        </nav>
+      </div>
+
+      <div class="footer__column">
+        <h2 class="footer__title">Mapa de sitio</h2>
+        <nav class="footer__links">
+          <a href="#inicio">Inicio</a>
+          <a href="#nosotros">Acerca de</a>
+          <a href="#vuelos">Vuelos</a>
+          <a href="#galeria">Galería</a>
+          <a href="politicas.html">Políticas y condiciones de vuelo</a>
+        </nav>
+      </div>
+    </div>
+    <p class="footer__legal">Magic Balloons. Todos los derechos reservados</p>
+  </footer>
+
+
+  <!-- WhatsApp flotante -->
+  <a class="whatsapp" href="https://wa.link/82540x" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg>
+  </a>
+
+  <!-- Galería ampliada (se abre al tocar una foto) -->
+  <dialog class="lightbox" id="lightbox">
+    <img class="lightbox__image" src="" alt="">
+    <button class="lightbox__close" type="button" aria-label="Cerrar">&times;</button>
+  </dialog>
+
+  <!-- FareHarbor: abre la reserva en una ventana encima de la página. No borrar. -->
+  <script src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

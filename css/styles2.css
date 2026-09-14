@@ -1,0 +1,653 @@
+/* ==============================================================
+   Magic Balloons — estilos de index2.html
+   Copia el diseño de la página anterior (magicballoonsmexico.com).
+
+   Colores:
+     #ff0909  rojo (botones y logo)
+     #efefef  gris claro (fondo de paquetes)
+     #ffcfcf  rosa (fondo de paquetes premium)
+     #000000  negro (títulos y pie de página)
+
+   Tipografías:
+     Anton       títulos grandes y precios
+     Montserrat  subtítulos de sección
+   ============================================================== */
+
+
+/* ---------- Base ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333333;
+  background: #ffffff;
+  overflow-x: hidden; /* los globos decorativos salen un poco de la orilla */
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+
+/* ---------- Botón rojo ---------- */
+
+.button {
+  display: inline-block;
+  padding: 0.35em 1.4em;
+  border-radius: 9px;
+  background: #ff0909;
+  color: #ffffff;
+  font-family: Anton, Impact, sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 1.9px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.button:hover {
+  background: #c80000;
+  transform: translateY(-2px);
+}
+
+
+/* ---------- Encabezado ---------- */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header__logo img {
+  width: 160px;
+  height: auto;
+}
+
+.nav {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav__link {
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+}
+
+.nav__link:hover {
+  color: #ff0909;
+}
+
+/* Botón de hamburguesa (solo en celular) */
+.header__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  background: none;
+  cursor: pointer;
+}
+
+.header__toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #ff0909;
+}
+
+
+/* ---------- Portada con fotos que se alternan ---------- */
+
+.hero {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 85vh;
+  min-height: 420px;
+  overflow: hidden;
+  background: #000000;
+  text-align: center;
+}
+
+.hero__slide {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  animation: hero-fade 12s infinite;
+}
+
+.hero__slide--1 {
+  background-image: url("https://magicballoonsmexico.com/wp-content/uploads/2025/09/slide1.jpg");
+}
+
+.hero__slide--2 {
+  background-image: url("https://magicballoonsmexico.com/wp-content/uploads/2025/09/slide2.jpg");
+  animation-delay: -6s; /* empieza a la mitad para turnarse con la primera */
+}
+
+/* Cada foto se ve 6 segundos y luego se desvanece */
+@keyframes hero-fade {
+  0%, 45%   { opacity: 1; }
+  50%, 95%  { opacity: 0; }
+  100%      { opacity: 1; }
+}
+
+.hero__content {
+  position: relative; /* encima de las fotos */
+  padding: 1rem;
+}
+
+.hero__title {
+  margin: 0 0 1.5rem;
+  font-family: Anton, Impact, sans-serif;
+  font-weight: 400;
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0 3px 16px rgba(0, 0, 0, 0.45);
+}
+
+.hero .button {
+  font-size: 1.5rem;
+}
+
+
+/* ---------- Paquetes ---------- */
+
+.flights {
+  padding: 4rem 1rem;
+  background: #efefef;
+}
+
+.flights--pink {
+  background: #ffcfcf;
+}
+
+.flights__inner {
+  display: grid;
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.flights__title {
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/* Tarjeta: foto de un lado, texto del otro */
+.package {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Versión con la foto a la derecha */
+.package--reversed .package__image {
+  order: 2;
+}
+
+.package__image {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+}
+
+.package__body {
+  padding: 2rem 2.5rem;
+}
+
+.package__name {
+  margin: 0;
+  font-family: Anton, Impact, sans-serif;
+  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.package__summary {
+  margin: 0.4rem 0 1.25rem;
+  text-transform: uppercase;
+}
+
+.package__list {
+  margin: 0 0 1.5rem;
+  padding-left: 1.4rem;
+}
+
+.package__price {
+  margin: 0;
+  font-family: Anton, Impact, sans-serif;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  line-height: 1.1;
+  color: #000000;
+}
+
+.package__unit {
+  margin: 0 0 1rem;
+  font-family: Anton, Impact, sans-serif;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/* Globos decorativos que "flotan" en la esquina inferior de la tarjeta.
+   Van del lado de la FOTO (--left si la foto está a la izquierda,
+   --right si está a la derecha) para nunca tapar el texto. */
+.balloon {
+  position: absolute;
+  z-index: 1;
+  bottom: -60px;
+  width: 200px;
+  pointer-events: none; /* no estorban al dar clic */
+  animation: float 6s ease-in-out infinite;
+}
+
+.balloon--right {
+  right: -70px;
+}
+
+.balloon--left {
+  left: -70px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-18px); }
+}
+
+
+/* ---------- Acerca de ---------- */
+
+.about {
+  padding: 4rem 1rem 0;
+  text-align: center;
+}
+
+.about__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about__title {
+  margin: 0 0 1rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.about__text {
+  max-width: 760px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+}
+
+.badges {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 0 0 3rem;
+  padding: 0;
+  list-style: none;
+}
+
+.badges__item {
+  font-size: 1.05rem;
+}
+
+.badges__item strong {
+  display: block;
+  font-family: Anton, Impact, sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.badges__icon {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1rem;
+  object-fit: contain;
+}
+
+.about__banner {
+  width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+}
+
+
+/* ---------- Opiniones ---------- */
+
+.reviews {
+  padding: 4rem 1rem;
+  background: #efefef;
+}
+
+.reviews__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.reviews__title {
+  margin: 0 0 0.5rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.reviews__rating {
+  margin: 0 0 2.5rem;
+  font-weight: 600;
+}
+
+/* Los círculos verdes de TripAdvisor */
+.reviews__stars {
+  display: block;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  color: #00aa6c;
+}
+
+.reviews__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 2rem;
+  border-top: 5px solid #ff0909;
+  background: #ffffff;
+}
+
+.review__quote {
+  flex: 1; /* empuja autor y enlace hacia abajo para alinear las tarjetas */
+  margin: 0.75rem 0 1rem;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.review__author {
+  font-family: Anton, Impact, sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.review__link {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #ff0909;
+}
+
+
+/* ---------- Galería ---------- */
+
+.gallery-section {
+  padding: 4rem 1rem;
+}
+
+.gallery-section__title {
+  margin: 0 0 2rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  text-align: center;
+  color: #000000;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 6px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.gallery__image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  cursor: zoom-in;
+  transition: filter 0.2s;
+}
+
+.gallery__image:hover {
+  filter: brightness(0.8);
+}
+
+.lightbox {
+  max-width: 92vw;
+  max-height: 92vh;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.88);
+}
+
+.lightbox__image {
+  max-width: 92vw;
+  max-height: 92vh;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+
+/* ---------- Pie de página ---------- */
+
+.footer {
+  padding: 4rem 1rem 1.5rem;
+  background: #000000;
+  color: #ffffff;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer__logo {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.footer__title {
+  margin: 0 0 1rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.footer__social,
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ff0909;
+}
+
+.footer__legal {
+  max-width: 1100px;
+  margin: 3rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid #333333;
+  font-size: 0.85rem;
+  text-align: center;
+  color: #aaaaaa;
+}
+
+
+/* ---------- Botón flotante de WhatsApp ---------- */
+
+.whatsapp {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ---------- Celulares (pantallas menores a 760px) ---------- */
+
+@media (max-width: 760px) {
+  .header__toggle {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: #ffffff;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav--open {
+    display: flex;
+  }
+
+  .nav__link {
+    padding: 1rem;
+    border-top: 1px solid #eeeeee;
+  }
+
+  .hero {
+    height: 60vh;
+  }
+
+  .package {
+    grid-template-columns: 1fr;
+  }
+
+  .package--reversed .package__image {
+    order: 0;
+  }
+
+  .package__image {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  .package__body {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .package__list {
+    text-align: left;
+  }
+
+  /* En celular la foto queda arriba, así que el globo sube con ella */
+  .balloon {
+    top: -40px;
+    bottom: auto;
+    width: 130px;
+  }
+
+  .balloon--right {
+    right: -30px;
+  }
+
+  .balloon--left {
+    left: -30px;
+  }
+
+  .badges {
+    grid-template-columns: 1fr;
+  }
+}
